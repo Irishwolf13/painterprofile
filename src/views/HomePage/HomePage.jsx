@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import UploadImage from '../../components/UploadImage/UploadImage';
 
 export default function HomePage() {
-  return (
+  return(
     <div>
-      Home Page.
+      <UploadImage />
     </div>
   )
 }
