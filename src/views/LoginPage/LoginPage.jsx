@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { auth } from '../firebase/config';
+import { auth } from '../../firebase/config.js';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from 'react-redux';
-import { setUser } from '../store/usersSlice.js';
-import FullPageLoader from '../components/FullPageLoader.jsx';
+import { setUser } from '../../store/usersSlice.js';
+import FullPageLoader from '../../components/FullPageLoader/FullPageLoader.jsx';
 
 export default function LoginPage() {
   const dispatch = useDispatch();

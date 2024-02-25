@@ -2,6 +2,7 @@
   text-align: center;
 }
 
+/* ***************************** FULL PAGE LOADER ***************************** */
 .full-page-loader {
   position: absolute;
   top: 0;
@@ -14,7 +15,6 @@
   justify-content: center;
   z-index: 9999;
 }
-
 .loader {
   border: 8px solid #f3f3f3;
   border-top: 8px solid #7f0095;
@@ -23,8 +23,8 @@
   height: 50px;
   animation: spin 1.5s linear infinite;
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(720deg); }
 }
+/* ***************************** END FULL PAGE LOADER ***************************** */

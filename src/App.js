@@ -1,10 +1,10 @@
 import './App.css';
-import LoginPage from './views/LoginPage';
-import HomePage from './views/HomePage.jsx';
+import LoginPage from './views/LoginPage/LoginPage.jsx';
+import HomePage from './views/HomePage/HomePage.jsx';
 import { Routes, Route } from "react-router-dom";
 import { selectUsers } from "./store/usersSlice.js";
 import { useSelector } from "react-redux";
-import Header from './components/Header.jsx'
+import Header from './components/Header/Header.jsx'
 
 function App() {
 
