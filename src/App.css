@@ -1,3 +1,15 @@
+:root {
+  /* primary colors */
+  --primary-black: #000000;       
+  --primary-blue-dark: #8884FF; 
+  --primary-orange: #fdad00;  
+  --primary-purple-light: #D7BCE8;
+  --primary-purple: #5F5566;      
+  --primary-purple-dark: #33202A; 
+  /* secondary colors */
+  --secondary-dark-blue: #0954b0;
+}
+
 .App {
   text-align: center;
 }

@@ -1,3 +1,4 @@
+import './LoginPage.css';
 import React, { useState } from 'react';
 import { auth } from '../../firebase/config.js';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
@@ -48,32 +49,35 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
+    <div className='login-container'>
       {isLoading && <FullPageLoader />}
-      <form>
-        <div>
-          <label htmlFor="username">Username:</label>
-          <input
-            type="text"
-            id="username"
-            name='email'
-            placeholder='Enter Email'
-            onChange={(e) => {handleCredentials(e)}}
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Password:</label>
-          <input
-            type="password"
-            id="password"
-            name='password'
-            placeholder='Enter Password'
-            onChange={(e) => {handleCredentials(e)}}
-          />
-        </div>
-        <button type="submit" onClick={(e) => {handleSignUp(e)}}>SignUp</button>
-        <button type="submit" onClick={(e) => {handleLogIn(e)}}>LogIn</button>
-      </form>
+      <img className='login-image' src='https://firebasestorage.googleapis.com/v0/b/painterprofile-df92e.appspot.com/o/images%2FlogInImage1.png?alt=media&token=6164bf91-88fa-4ab3-8cd5-aff5a2cba814' alt='Login image'/>
+      <div className='login-form'>
+        <form>
+          <div>
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              name='email'
+              placeholder='Enter Email'
+              onChange={(e) => {handleCredentials(e)}}
+            />
+          </div>
+          <div>
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              name='password'
+              placeholder='Enter Password'
+              onChange={(e) => {handleCredentials(e)}}
+            />
+          </div>
+          {/* <button type="submit" onClick={(e) => {handleSignUp(e)}}>SignUp</button> */}
+          <button className='login-button'type="submit" onClick={(e) => {handleLogIn(e)}}>LogIn</button>
+        </form>
+      </div>
       {error && 
         <div>{error}</div>
       }
